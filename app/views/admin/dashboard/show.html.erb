@@ -1,2 +1,7 @@
 <h1>Admin::Dashboard#show</h1>
 <p>Find me in app/views/admin/dashboard/show.html.erb</p>
+
+<div class="list-group">
+  <button type="button" class="list-group-item"><h4><strong>Products:</strong> <%=@product_count%></h4></button>
+  <button type="button" class="list-group-item"><h4><strong>Categories:</strong> <%= @cat_count%></h4></button>
+</div>
