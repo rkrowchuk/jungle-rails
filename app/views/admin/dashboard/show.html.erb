@@ -1,6 +1,6 @@
 <h1>Admin Dashboard</h1>
 
-<div class="list-group">
-  <button type="button" class="list-group-item"><h4><%= link_to "Products: #{@product_count}", admin_products_path%></h4></button>
-  <button type="button" class="list-group-item"><h4><%= link_to "Categories: #{@cat_count}", admin_products_path%></h4></button>
-</div>
+<ul class="list-group">
+   <li class="list-group-item"><%= link_to "Products", admin_products_path%><span class="badge"><%=@product_count%></span></li>
+  <li class="list-group-item"><%= link_to "Categories", admin_products_path%><span class="badge"><%=@cat_count%></span></li>
+</ul>
