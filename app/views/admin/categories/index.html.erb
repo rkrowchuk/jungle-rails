@@ -8,7 +8,24 @@
     <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
   </div>
 
-  <div><%= render @cats %> </div>
+  
+  <div class="panel panel-default products">
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2">Category</th>
+          <th>Created</th>
+          <th>Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @categories %>
+      </tbody>
+    </table>
+
+  </div>
+  
 
 
 </section>
