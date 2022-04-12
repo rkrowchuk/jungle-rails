@@ -20,7 +20,8 @@ class UsersController < ApplicationController
       :firstname,
       :lastname,
       :email,
-      :password
+      :password,
+      :password_confirmation
     )
   end
 
