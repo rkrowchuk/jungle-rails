@@ -39,7 +39,24 @@ RSpec.describe User, type: :model do
   end
 
   describe '.authenticate_with_credentials' do
-    # examples for this class method here
+    it 'authenticates with valid credentials' do
+      subject.email = "newtest@test.com"
+      subject.save
+      user = User.authenticate_with_credentials(subject.email, subject.password)
+      expect(user).to match subject
+    end
+    it 'authenticates with whitespace around email' do
+      subject.email = "whitespace@test.com"
+      subject.save
+      user = User.authenticate_with_credentials(" " + subject.email + " ", subject.password)
+      expect(user).to match subject
+    end
+    it 'authenticates with mixed cases' do
+      subject.email = "casetest@test.com"
+      subject.save
+      user = User.authenticate_with_credentials("caSeTeSt@teSt.com", subject.password)
+      expect(user).to match subject
+    end
   end
-  
+
 end
