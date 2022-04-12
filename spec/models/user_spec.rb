@@ -28,9 +28,14 @@ RSpec.describe User, type: :model do
       subject.password_confirmation = "wrong"
       expect(subject.password_confirmation).not_to match subject.password
     end
-    it 'it is not valid without a unique email' do
+    it 'is not valid without a unique email' do
       new_subject = User.create(firstname: "New", lastname: "User", email: "test@test.com", password: "password2", password_confirmation: "password2")
       expect(subject).to_not be_valid
     end
+    it 'is not valid with a password less than 8 characters' do
+      subject.password = "wrong"
+      expect(subject).to_not be_valid
+    end
+
   end
 end
