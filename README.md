@@ -10,7 +10,7 @@ A mini e-commerce application built with Rails 4.2 for purposes of becoming fami
 - Testing: Tests were ran using rspec and capybara. 
 
 ## Final Product
-[Image of the home page]()
+[Image of the home page](https://github.com/rkrowchuk/jungle-rails/blob/master/docs/Jungle-home.png?raw=true)
 
 ## Setup
 
